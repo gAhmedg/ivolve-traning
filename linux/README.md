@@ -3,7 +3,7 @@
 This is a simple Bash script named `lab3-ping.sh` to ping all devices in a given subnet (`192.168.1.0/24`). 
 The script pings each IP address in the subnet and reports whether the host is up or down.
 
-## Usage
+### Usage
 
 1. Clone the repository or download the `lab3-ping.sh` script to your local machine.
 2. Make the script executable:
@@ -16,7 +16,7 @@ The script pings each IP address in the subnet and reports whether the host is u
    ./lab3-ping.sh
    ```
 
-## Example Output
+### Example Output
 
  ```sh
     Host 192.168.1.1 is up
