@@ -11,7 +11,7 @@ The script pings each IP address in the subnet and reports whether the host is u
    ```sh
    chmod +x lab3-ping.sh
    ```
-/()
+
 3. Run the script 
     ```sh
    ./lab3-ping.sh
