@@ -1,4 +1,4 @@
-#Labs
+# Labs
 ## Lab3 Ping Script
 
 This is a simple Bash script named `lab3-ping.sh` to ping all devices in a given subnet (`192.168.1.0/24`). 
