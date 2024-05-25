@@ -11,7 +11,7 @@ The script pings each IP address in the subnet and reports whether the host is u
    ```sh
    chmod +x lab3-ping.sh
    ```
-
+/()
 3. Run the script 
     ```sh
    ./lab3-ping.sh
@@ -25,4 +25,6 @@ The script pings each IP address in the subnet and reports whether the host is u
     Host 192.168.1.3 is up
     Host 192.168.1.4 is down
   ```
+
+  ![Alt text](IMG_0319testse.jpg)
 
