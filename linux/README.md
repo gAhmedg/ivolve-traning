@@ -26,5 +26,4 @@ The script pings each IP address in the subnet and reports whether the host is u
     Host 192.168.1.4 is down
   ```
 
-  ![Alt text](IMG_0319testse.jpg)
-
+ 
