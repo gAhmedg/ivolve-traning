@@ -1,4 +1,5 @@
-# Lab3 Ping Script
+#Labs
+## Lab3 Ping Script
 
 This is a simple Bash script named `lab3-ping.sh` to ping all devices in a given subnet (`192.168.1.0/24`). 
 The script pings each IP address in the subnet and reports whether the host is up or down.
