@@ -42,8 +42,8 @@ This script collects system storage, CPU, and memory usage information and sends
   ![Alt text](matrial/set2.png)
 
 ***
-
-
+***
+***
 
 
 
