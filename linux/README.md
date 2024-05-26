@@ -35,6 +35,13 @@ This script collects system storage, CPU, and memory usage information and sends
     ```
 
 
+ ![Alt text](matrial/set1.png)
+
+ 5. **the output**:
+
+  ![Alt text](matrial/set2.png)
+
+***
 
 
 
