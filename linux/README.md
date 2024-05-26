@@ -1,4 +1,47 @@
 # Labs
+
+## Lab2 System Report Script
+
+This script collects system storage, CPU, and memory usage information and sends it via email to a specified Gmail address using `msmtp`.
+
+
+## Prerequisites
+
+1. **msmtp**: Ensure `msmtp` is installed and configured correctly.
+2. **mailutils**: Install `mailutils` for `mailx` command if not already installed.
+
+### Installation
+
+1. **Install msmtp and mailutils**:
+```bash
+    sudo apt update
+    sudo apt install msmtp mailutils
+```
+
+2. **Configure msmtp**:
+    Create a `~/.msmtprc` file with the following content:
+
+
+3. **Set Permissions**:
+    Ensure the `~/.msmtprc` file has the correct permissions:
+
+```bash
+    chmod 600 ~/.msmtprc
+```
+4. **Make the Script Executable and Run it**:
+    ```bash
+   chmod +x system_report.sh
+   ./system_report.sh
+    ```
+
+
+
+
+
+
+
+
+
 ## Lab3 Ping Script
 
 This is a simple Bash script named `lab3-ping.sh` to ping all devices in a given subnet (`192.168.1.0/24`). 
