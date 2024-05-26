@@ -9,3 +9,5 @@ do
         echo "Host ${subnet}.${ip} is down" 
     fi
 done
+
+
