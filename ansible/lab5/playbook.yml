@@ -1,0 +1,34 @@
+- name: Install and Configure Nginx
+  hosts: web
+  become: yes
+  tasks:
+
+  - name: Ensure Nginx is installed
+    apt:
+      name: nginx
+      state: present
+      update_cache: yes
+
+  - name: Start and enable Nginx service
+    service:
+      name: nginx
+      state: started
+      enabled: yes
+
+  - name: Create custom index.html
+    copy:
+      dest: /var/www/html/index.html
+      content: |
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title> Website gom3a</title>
+        </head>
+        <body>
+            <h1>Hello, World from Ansible!</h1>
+            <p>This is the lab5 .</p>
+        </body>
+        </html>
+
+
+
