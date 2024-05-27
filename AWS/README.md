@@ -52,4 +52,11 @@ Create a Security Group for the EC2 Instance:
     ssh -i path/to/key.pem ec2-user@private-instance-private-ip
         ```
 
-<video controls src="screenshot/lab20.mp4" title="Title"></video>
+***
+Bastion-ssh
+***
+![Alt text](screenshot/Bastion-ssh.png)
+***
+private-ssh.png
+***
+![Alt text](screenshot/private-ssh.png)
