@@ -51,6 +51,5 @@ Create a Security Group for the EC2 Instance:
     ```bash
     ssh -i path/to/key.pem ec2-user@private-instance-private-ip
         ```
-***
+
 <video controls src="screenshot/lab20.mp4" title="Title"></video>
-***
