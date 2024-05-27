@@ -1,0 +1,38 @@
+- name: Install MySQL and configure database
+  hosts: db
+  become: yes
+  vars_files:
+  - vault.yml
+  tasks:
+  - name: Install MySQL Server
+    apt:
+      name:
+      - mysql-server
+      - python3-mysqldb
+      state: present
+      update_cache: yes
+
+  - name: Ensure MySQL service is running and enabled
+
+    service:
+      name: mysql
+      state: started
+      enabled: yes
+
+  - name: Set root user password
+    mysql_user: name=root password="{{ mysql_root_password }}" check_implicit_admin=yes state=present
+
+  - name: Create MySQL database
+    mysql_db:
+      name: ivolvedb
+      state: present
+      login_user: root
+      login_password: "{{ mysql_root_password }}"
+
+  - name: Create MySQL user with all privileges on ivolvedb
+    mysql_user:
+      name: ahmed
+      password: "{{ db_user_password }}"
+      priv: '*.*:ALL'
+      login_user: root
+      login_password: "{{ mysql_root_password }}"
