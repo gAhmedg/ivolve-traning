@@ -1,0 +1,6 @@
+{
+    "LoggingEnabled": {
+        "TargetBucket": "ivolve-gom3a-bucket",
+        "TargetPrefix": "logs/"
+    }
+}
