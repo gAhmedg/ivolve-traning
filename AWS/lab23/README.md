@@ -69,4 +69,4 @@ The objective of this lab is to build a serverless application using AWS Lambda,
 ## the video shown the web with the DynmaoDB  
 
 
-![alt text](screenshot/api-lambda.gif)
+![alt text](screenshot/api-lambda1.gif)
