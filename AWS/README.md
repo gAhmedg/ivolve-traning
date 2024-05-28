@@ -245,4 +245,4 @@ Get the DNS Name of the Load Balancer:
    - Go to the Load Balancer section in the EC2 dashboard.
    - Copy the DNS name of the created load balancer.
 
-   <video controls src="screenshot/lab21-DNS-LB.mp4" title="Title"></video>
+   <video controls src="screenshot/lab21-DNS-LB.mov" title="Title"></video>
