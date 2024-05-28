@@ -67,5 +67,6 @@ The objective of this lab is to build a serverless application using AWS Lambda,
     use the Invoke url to can access the web 
 
 ## the video shown the web with the DynmaoDB  
- 
- <video><video controls src="screenshot/api-lambda.mp4" title="Title"></video>
+
+
+<video controls src="screenshot/api-lambda.mp4" title="Title"></video>
