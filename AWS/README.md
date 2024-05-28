@@ -246,4 +246,4 @@ Get the DNS Name of the Load Balancer:
    - Copy the DNS name of the created load balancer.
 
 
-s<video controls src="screenshot/lab21-DNS-LB.mov" title="Title"></video>
+<video controls src="screenshot/lab21-DNS-LB.mov" title="Title"></video>
