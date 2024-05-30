@@ -1,6 +1,5 @@
 # Lab 26: Ansible Dynamic Inventories
-
-![alt text](Dynamic.drawio.svg)
+![alt text](screenshoots/Dynamic.drawio.svg)
 
 ##  Objective
 The objective of this lab is to set up Ansible dynamic inventories to automatically discover and manage infrastructure. By the end of this lab, you will be able to use dynamic inventories to scale playbook execution across different environments.

@@ -1,5 +1,7 @@
 # Lab 27: Ansible Roles for Application Deployment
 
+![alt text](screenshots/static.drawio.svg)
+
 
 ## Objective
 
