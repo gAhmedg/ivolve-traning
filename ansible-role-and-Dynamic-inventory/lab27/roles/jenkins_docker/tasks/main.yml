@@ -1,0 +1,78 @@
+
+# roles/jenkins_docker/tasks/main.yml
+---
+- name: Update all packages to the latest version
+  yum:
+    name: "*"
+    state: latest
+
+- name: Install required dependencies
+  yum:
+    name: 
+      - git
+      - yum-utils
+    state: present
+
+# Install OpenJDK 11
+- name: Add Amazon Corretto repository
+  yum_repository:
+    name: corretto
+    description: Amazon Corretto
+    baseurl: https://yum.corretto.aws
+    gpgcheck: yes
+    gpgkey: https://yum.corretto.aws/corretto.key
+    state: present
+
+- name: Install Amazon Corretto 11 (OpenJDK 11)
+  yum:
+    name: java-11-amazon-corretto-devel
+    state: present
+
+
+# Install Jenkins
+- name: Add Jenkins repository
+  yum_repository:
+    name: jenkins
+    description: Jenkins
+    baseurl: http://pkg.jenkins.io/redhat-stable
+    gpgcheck: yes
+    gpgkey: http://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    state: present
+
+- name: Install Jenkins
+  yum:
+    name: jenkins
+    state: latest
+
+- name: Start and enable Jenkins service
+  systemd:
+    name: jenkins
+    state: started
+    enabled: yes
+
+# Install Docker using yum package manager
+- name: Add Docker repository
+  yum_repository:
+    name: docker
+    description: Docker CE Stable - x86_64
+    baseurl: https://download.docker.com/linux/centos/7/x86_64/stable
+    gpgcheck: yes
+    gpgkey: https://download.docker.com/linux/centos/gpg
+    state: present
+
+- name: Install Docker
+  yum:
+    name: 
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+    state: present
+
+- name: Start and enable Docker service
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
+
+
+

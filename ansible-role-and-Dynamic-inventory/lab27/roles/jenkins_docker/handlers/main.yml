@@ -1,0 +1,12 @@
+# roles/jenkins_docker/handlers/main.yml
+---
+- name: restart jenkins
+  systemd:
+    name: jenkins
+    state: restarted
+
+- name: restart docker
+  systemd:
+    name: docker
+    state: restarted
+

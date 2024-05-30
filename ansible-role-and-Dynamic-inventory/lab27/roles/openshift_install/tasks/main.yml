@@ -1,0 +1,20 @@
+# roles/openshift_install/tasks/main.yml
+---
+- name: Install required packages for OpenShift CLI (oc)
+  yum:
+    name: 
+      - yum-utils
+      - wget
+      - tar
+    state: present
+
+- name: Download oc binary
+  get_url:
+    url: "https://mirror.openshift.com/pub/openshift-v4/clients/oc/latest/linux/oc.tar.gz"
+    dest: "/tmp/oc.tar.gz"
+
+- name: Extract oc binary
+  command: "tar -xf /tmp/oc.tar.gz -C /usr/local/bin/"
+  args:
+    creates: /usr/local/bin/oc
+
