@@ -1,0 +1,7 @@
+# install_openshift.yml
+---
+- hosts: aws_ec2
+  become: yes
+  roles:
+    - openshift_install
+
