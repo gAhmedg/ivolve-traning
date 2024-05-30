@@ -280,9 +280,9 @@ In this lab, you have successfully organized Ansible playbooks using roles. You 
 By following these steps, you have laid the foundation for more advanced Ansible usage and infrastructure automation practices.
 
 ### Additional Resources
-    Ansible Documentation
-    Ansible Galaxy
-    Jenkins Documentation
-    Docker Documentation
-    OpenShift CLI Documentation
-    AWS EC2 Documentation
+- [Ansible Documentation](https://docs.ansible.com/)
+- [Ansible Galaxy](https://galaxy.ansible.com/)
+- [Jenkins Documentation](https://www.jenkins.io/doc/)
+- [Docker Documentation](https://docs.docker.com/)
+- [OpenShift CLI Documentation](https://docs.openshift.com/container-platform/latest/cli_reference/openshift_cli/getting-started-cli.html)
+- [AWS EC2 Documentation](https://docs.aws.amazon.com/ec2/index.html)-
