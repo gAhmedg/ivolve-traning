@@ -6,4 +6,5 @@
 ## Lab 27: Ansible Roles for Application Deployment
 - [Ansible Roles for Application Deployment ](https://github.com/gAhmedg/ivolve-traning/tree/main/ansible-role-and-Dynamic-inventory/lab27)
 ---
+
 ![alt text](matrial/labs.jpg)
