@@ -117,7 +117,8 @@ To roll back the deployment:
 ```bash
 oc rollout undo deployment/nginx-deployment
 ```
-the GIF show the steps (4,5and 6)  
+the GIF show the steps (4,5and 6) 
+ 
 ![alt text](screenshots/video.gif)
 ## Conclusion
 By following these steps, you have successfully deployed NGINX with 3 replicas, exposed it via a service, updated the deployment to use another image, viewed the rollout history, rolled back to the previous version, and confirmed the rollback by monitoring the pod status.
