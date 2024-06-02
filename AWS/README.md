@@ -14,7 +14,7 @@ The solutions for the labs are organized into a structured folder system to ensu
 | Lab 22     | <span style="color: purple;">💻 SDK and CLI Interactions</span>                                                | [SDK and CLI Interactions](https://github.com/gAhmedg/ivolve-traning/tree/main/AWS/lab22)  |
 | Lab 23     | <span style="color: orange;">⚡ Serverless Application Development</span>                                       | [Serverless Application Development](https://github.com/gAhmedg/ivolve-traning/tree/main/AWS/lab23)  |
 
-
+***
 
 ```
 AWS/
