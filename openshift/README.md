@@ -3,10 +3,11 @@
 
 ## Kubernetes Labs
 
-| Lab Number | Lab Title                                     | Link                                                                                   |
-|------------|-----------------------------------------------|----------------------------------------------------------------------------------------|
-| Lab 7      | 🟢 Deployment and Management of NGINX with Kubernetes | [Deployment and Management of NGINX with Kubernetes](https://github.com/gAhmedg/ivolve-traning/tree/main/openshift/lab7) |
-| Lab 8      | 🔄 Deployment vs. StatefulSet                    | [Deployment vs. StatefulSet](https://github.com/gAhmedg/ivolve-traning/tree/main/openshift/lab8)                         |
-| Lab 9      | 💾 Storage Configuration                         | [Storage Configuration](https://github.com/gAhmedg/ivolve-traning/tree/main/openshift/lab9)                             |
+| Lab Number | Lab Title                                                                                                      | Link                                                                                   |
+|------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| Lab 7      | <span style="color: green;">🟢 Deployment and Management of NGINX with Kubernetes</span>                       | [Deployment and Management of NGINX with Kubernetes](https://github.com/gAhmedg/ivolve-traning/tree/main/openshift/lab7) |
+| Lab 8      | <span style="color: blue;">🔄 Deployment vs. StatefulSet</span>                                                | [Deployment vs. StatefulSet](https://github.com/gAhmedg/ivolve-traning/tree/main/openshift/lab8)                         |
+| Lab 9      | <span style="color: orange;">💾 Storage Configuration</span>                                                   | [Storage Configuration](https://github.com/gAhmedg/ivolve-traning/tree/main/openshift/lab9)                               |
+                           |
 
 
