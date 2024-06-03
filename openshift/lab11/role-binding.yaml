@@ -1,0 +1,15 @@
+# role-binding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: pod-reader-binding
+subjects:
+- kind: ServiceAccount
+  name: my-serviceaccount
+roleRef:
+  kind: Role
+  name: pod-reader
+  apiGroup: rbac.authorization.k8s.io
+
+
+oc get secret $(oc get sa my-serviceaccount -o jsonpath='{.secrets[0].name}' ) -o jsonpath='{.data.token}' | base64 --decode

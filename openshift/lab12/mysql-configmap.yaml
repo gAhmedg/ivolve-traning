@@ -1,0 +1,9 @@
+# mysql-configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config
+  namespace: nti
+data:
+  database_name: my_database
+  database_user: my_user

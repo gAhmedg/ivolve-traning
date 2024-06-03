@@ -1,0 +1,11 @@
+# resource-quota.yaml
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: nti-resource-quota
+  namespace: nti
+spec:
+  hard:
+    cpu: "1"
+    memory: 2Gi
+    pods: "5"
