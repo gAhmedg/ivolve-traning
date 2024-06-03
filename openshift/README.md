@@ -1,4 +1,4 @@
-# Solution of Openshift&kubernetes labs (7,8,9)
+# Solution of Openshift&kubernetes labs (7,8,9,10,11,12)
 
 
 ## Kubernetes Labs
