@@ -1,4 +1,4 @@
-# Lab 10: Network Configuration
+#   
 
 This lab demonstrates how to configure network settings in a Kubernetes cluster using Minikube. In this lab, we will build a custom NGINX image, create a deployment and service to expose the NGINX pods, define a network policy to restrict traffic to the NGINX pods, enable the NGINX Ingress controller, create an Ingress resource to route traffic, and access the NGINX service via the Ingress endpoint using a domain name.
 
