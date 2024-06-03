@@ -76,7 +76,7 @@ kubectl apply -f ingress.yaml
 
 - Open a web browser and navigate to http://gom3a.local
 
-![alt text](<screenshots/gom3a.local>)
+![alt text](<screenshots/gom3a.local.png>)
 
 ## Cleanup
 After completing the lab, you can clean up the resources by deleting the Kubernetes objects:
