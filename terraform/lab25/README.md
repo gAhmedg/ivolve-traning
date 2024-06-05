@@ -73,7 +73,6 @@ RDS Instances: Launches two RDS MySQL database instances, each in a different av
 To destroy the resources created by this Terraform configuration, run:
 
 ```bash
-Copy code
 terraform destroy
 ```
 Confirm the destroy action when prompted.
