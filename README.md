@@ -11,3 +11,4 @@
 | <span style="color: orange;">🖥️ Linux</span>                    | [Linux](https://github.com/gAhmedg/ivolve-traning/tree/main/linux)                                  |
 | <span style="color: purple;">🚀 OpenShift</span>                | [OpenShift](https://github.com/gAhmedg/ivolve-traning/tree/main/openshift)                          |
 | <span style="color: brown;">⚙️ Terraform</span>                 | [Terraform](https://github.com/gAhmedg/ivolve-traning/tree/main/terraform)                          |
+| <span style="color: green;">🟢 jenkins</span>                    | [jenkins](https://github.com/gAhmedg/ivolve-traning/tree/main/jenkins)                              |
