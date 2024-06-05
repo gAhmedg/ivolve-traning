@@ -96,6 +96,11 @@ pipeline {
 
 ### Jenkins Shared Library
 Create the following Groovy scripts in your shared library:
+my custem Shared Library you will find i there
+
+```
+https://github.com/gAhmedg/Shared-library
+```
 
 - buildAndPush.groovy:
 
