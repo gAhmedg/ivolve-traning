@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ivolve-jenkins-app-deployment
+  labels:
+    app: ivolve-jenkins-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ivolve-jenkins-app
+  template:
+    metadata:
+      labels:
+        app: ivolve-jenkins-app
+    spec:
+      containers:
+      - name: ivolve-jenkins-app
+        image: algn48/ivolve-jenkins-app:10
+        ports:
+        - containerPort: 8081
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ivolve-jenkins-app-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: ivolve-jenkins-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8081
