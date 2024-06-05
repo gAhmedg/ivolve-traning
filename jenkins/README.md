@@ -40,9 +40,10 @@ Before you begin, ensure you have the following:
     - Configure Jenkins Master to communicate with Jenkins Slave. Ensure the Slave has Docker installed and properly configured.
     - Add the Slave node in Jenkins: Manage Jenkins > Manage Nodes > New Node.
     - creating slave in EC2 in aws
+
 ![alt text](screenshots/1.png)
     
-    - using ssh connection between master and slave 
+- using ssh connection between master and slave 
     
 ![alt text](screenshots/3.png)
 
