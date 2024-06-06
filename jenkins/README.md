@@ -152,7 +152,7 @@ pipeline {
 
 
 ```
-## the image after ppushing in DockerHub
+## the image after pushing in DockerHub
 
 ![alt text](screenshots/4.png)
 
