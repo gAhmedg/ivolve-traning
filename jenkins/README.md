@@ -1,4 +1,4 @@
-# Kubernetes Deployment using Master slave jenkins
+# Kubernetes Deployment using Master-Slave Jenkins
 
 
 ## Overview
@@ -34,6 +34,36 @@ Before you begin, ensure you have the following:
 4. Deploy to OpenShift: The new image is deployed to the OpenShift cluster.
 
 ## Setup Instructions
+
+
+### SSH Key Generation for Slave Instance
+To securely connect your Jenkins master to the slave instance, you need to generate an SSH key pair and configure the private key on the Jenkins master.
+
+1. Generate SSH Key Pair on Master Jenkins:
+
+Run the following command on your Jenkins master to generate an SSH key pair:
+
+```bash
+ssh-keygen  
+# (~/.ssh/<name_of_your_key>)
+```
+Follow the prompts to save the key pair in the default location  and provide a passphrase if desired.
+
+2. Copy the Public_ip to the Slave Instance to add it then in jenkins:
+
+
+3. Add the Private Key to Jenkins Master:
+
+- Navigate to Jenkins web UI.
+- Go to Manage Jenkins > Manage Credentials > (global) > Add Credentials.
+- Select Kind as SSH Username with private key.
+- Fill in the ID and Description fields as needed.
+- For Username, enter the username used to log in to the slave instance.
+- Select Enter directly under Private Key and paste the contents of ~/.ssh/(your_key) from the Jenkins master.
+
+![alt text](screenshots/ssh-keygen.png)
+
+
 ### Jenkins Configuration
 
 1. Set up Jenkins Master-Slave Configuration:
@@ -65,29 +95,61 @@ Before you begin, ensure you have the following:
 ```groovy
     @Library('shared-library') _
 
-agent {label 'slave1'}
+agent {
+    label 'slave1'
+}
+
 pipeline {
-    environment {imageName = 'algn48/ivolve-jenkins-app'}
+    environment {
+        imageName = 'algn48/ivolve-jenkins-app'
+    }
+
     agent any
+
     stages {
         stage('Verify Branch') {
-            steps {echo "$GIT_BRANCH"}
-        }
-        
-        stage('Build and Push Docker Image') {
             steps {
-                script {  buildPushtoHub([ image: "${imageName}:${BUILD_NUMBER}", DockerCredentials: 'DOCKERHUB' ])  } 
+                echo "$GIT_BRANCH"
             }
         }
-                stage('kubernetes') {
+
+        stage('build') {
             steps {
-               withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: '', contextName: '', credentialsId: '4', namespace: '', serverUrl: '']]) {    
-                 sh 'kubectl apply -f DeplymentAndSvc.yml -n ahmedgomaa'
-                  }
-            }  
-        }   
-     }
+                script {
+                    
+                    sh './gradlew build'
+                }
+            }
+        }
+
+        stage('test') {
+            steps {
+                script {
+                   
+                    sh './gradlew test'
+                }
+            }
+        }
+
+        stage('Build and Push Docker Image') {
+            steps {
+                script {
+                    buildPushtoHub([ image: "${imageName}:${BUILD_NUMBER}", DockerCredentials: 'DOCKERHUB' ])
+                }
+            }
+        }
+
+        stage('kubernetes') {
+            steps {
+                withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: '', contextName: '', credentialsId: '4', namespace: 'ahmedgomaa', serverUrl: '']]) {
+                    sh 'kubectl config current-context'
+                    sh 'kubectl apply -f DeplymentAndSvc.yml -n ahmedgomaa'
+                }
+            }
+        }
+    }
 }
+
 
 ```
 ## the image after ppushing in DockerHub
@@ -211,8 +273,8 @@ kubectl create token jenkins -n ahmedgomaa
 
 ## THE PIPELINE FINAL STAGES
 
-![alt text](screenshots/2.png)
 
+![alt text](screenshots/2afterbuildtest.png)
 ## THE FINAL WEBSITE AFTER DEPLOYED IN CLUSTER 
 
 
