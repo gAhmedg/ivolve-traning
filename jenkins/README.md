@@ -44,8 +44,9 @@ To securely connect your Jenkins master to the slave instance, you need to gener
 Run the following command on your Jenkins master to generate an SSH key pair:
 
 ```bash
-ssh-keygen  
-# (~/.ssh/<name_of_your_key>)
+# don't forget (~/.ssh/<name_of_your_key>)
+  ssh-keygen  
+
 ```
 Follow the prompts to save the key pair in the default location  and provide a passphrase if desired.
 
