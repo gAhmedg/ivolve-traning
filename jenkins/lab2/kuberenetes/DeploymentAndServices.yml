@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-app
+  labels:
+    app: myapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp-python
+        image: algn48/nti-app
+        ports:
+        - containerPort: 5000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-python-service
+  labels:
+    app: myapp
+spec:
+  selector:
+    app: myapp
+
+  type: NodePort
+  ports:
+  - port: 5000
+    targetPort: 5000
+
